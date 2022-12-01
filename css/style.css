@@ -1,0 +1,144 @@
+html{
+    font-size: 62.5%;/* 16px*62.5%=10px */
+    background-color: papayawhip;
+    font-family: 'Open Sans', sans-serif;
+    color: #222222;
+    background-image: url(../img/tobira.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+
+header{
+    padding: 50px 0 150px 0;
+}
+
+main{
+    font-size: 2.4rem;
+}
+
+.header-text{
+    font-size: 3rem;
+    text-align: left;
+    margin: 0 auto 0 30px;
+    color: #f7f7f7;
+    text-shadow:
+    0.5px 0.5px 0px #000, -0.5px -0.5px 0px #000,
+   -0.5px 0.5px 0px #000,  0.5px -0.5px 0px #000,
+    0.5px 0px 0px #000, -0.5px  0px 0px #000,
+    0px 0.5px 0px #000,  0px -0.5px 0px #000;
+    letter-spacing: 5px;
+}
+
+.search-box{
+    text-align: center;
+}
+
+.p-wikipedia{
+    text-align: center;
+}
+
+.go-wiki{
+    padding: 30px 0;
+}
+
+.go-box{
+    margin: 0 auto;
+    position: relative;
+    width:245px;
+    box-sizing: border-box;
+    margin-top: 15px;
+    animation-name:go-boxAnime;
+    animation-duration:1s;
+    animation-fill-mode:forwards;
+}
+.go-box input[type="text"]{
+    border: 1px solid #999;
+    padding: 3px 5px;
+    border-radius: 5px 0 0 5px;
+    height: 2.2em;
+    overflow: hidden;
+}
+.go-box input[type="text"]:focus {
+    outline: 0;
+}
+
+@keyframes go-boxAnime{
+  from {
+	filter: go-box(10px);
+	transform: scale(1.02);
+  }
+
+  to {
+	filter: go-box(0);
+	transform: scale(1);
+  }
+}
+
+.f-button a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 240px;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 600;
+    background: #eee;
+    overflow:hidden;
+}
+.f-button a:before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 150%;
+    height: 500%;
+    content: "";
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    transform: translateX(-98%) translateY(-25%) rotate(45deg);
+    background: #6bb6ff;
+    opacity: 0.2;
+}
+.f-button a:hover:before {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.p-wikipedia__body{
+    padding: 50px 20px;
+}
+
+.p-wiki-main{
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+}
+
+.p-wiki{
+    width: 300px;
+    padding: 50px 10px;
+    background-color: rgba(223, 243, 247, 0.399);
+    border-radius: 5%;
+}
+
+.p-wiki-block{
+    text-decoration: none;
+    color: #222222;
+}
+.p-wiki-block a{
+    display: inline-block;
+    font-size:120%;
+    text-decoration:none;
+    transition: 0.5s;
+}
+.p-wiki-block a:hover{
+    color: transparent;
+    text-shadow: 0 0 5px #ee2d7b;
+}
